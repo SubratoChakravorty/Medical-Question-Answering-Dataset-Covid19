@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html class='' guest='1' prime='0' xmlns:fb='//ogp.me/ns/fb#' xmlns='//www.w3.org/1999/xhtml'>
+<head prefix='og: //ogp.me/ns# fb: //ogp.me/ns/fb# healthtap: //ogp.me/ns/fb/healthtap#'>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"711ff91c60","applicationID":"314252","transactionName":"Jl0NQBFeWF8BExtNRQBAPEUWVEdHDQ5aSxkWWgxDQxwUVBEER0w=","queueTime":0,"applicationTime":13,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={xpid:"VwcCV1NACwIEVlRQ",licenseKey:"711ff91c60",applicationID:"314252"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||"document"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+<meta>
+<title>My husband works everywhere including a short trip to east London last week. He's showing symptoms of the covid 19 virus. What should I do as the flu medication is not helping.
+? - Answered by top doctors on HealthTap</title>
+<link href="/imgs/favicons/favicon.ico?1571124199" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<meta content='Dr. Kirsten responded: Flu. Self isolation. Make sure he has not been in contact with anyone with Covid-19. &lt;br&gt;Get him tested as soon as possible.&lt;br&gt;Relax. Most of these symptoms are that of the normal flu.&lt;br&gt;Hope he feel better soon.&lt;br&gt;&lt;br&gt;' name='description'>
+<link href='https://www.healthtap.com/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-' rel='canonical'>
+<meta content='287156428042981' property='fb:app_id'>
+<meta content='AE0E77F69ECBE95D1FD92399A52AF425' name='msvalidate.01'>
+<meta content='en-US' http-equiv='Content-Language'>
+<meta content="My husband works everywhere including a short trip to east London last week. He's showing symptoms of the covid 19 virus. What should I do as the flu medication is not helping.&#x000A;? - Answered by top doctors on HealthTap" property='og:title'>
+<meta content='https://www.healthtap.com/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-' property='og:url'>
+<meta content='website' property='og:type'>
+<meta content='HealthTap' property='og:site_name'>
+<meta content='https://edc2.healthtap.com/ht-staging/user_answer/reference_image/47346/normal/486489287.jpeg?1415868035' property='og:image'>
+<meta content='Dr. Kirsten responded: Flu. Self isolation. Make sure he has not been in contact with anyone with Covid-19. &lt;br&gt;Get him tested as soon as possible.&lt;br&gt;Relax. Most of these symptoms are that of the normal flu.&lt;br&gt;Hope he feel better soon.&lt;br&gt;&lt;br&gt;' property='og:description'>
+<meta content='ziWLsZCe0kE5BChNCR7BVSyfHOLoFEwNqNsbdf0MftA' name='google-site-verification'>
+<meta content='https://edc2.healthtap.com/ht-staging/user_answer/reference_image/47346/normal/486489287.jpeg?1415868035' property='image'>
+<meta content="My husband works everywhere including a short trip to east London last week. He's showing symptoms of the covid 19 virus. What should I do as the flu medication is not helping.&#x000A;? - Answered by top doctors on HealthTap" property='title'>
+<meta content='web' property='my_ua'>
+<meta content='width=device-width, maximum-scale=1.0, minimum-scale=1.0' name='viewport'>
+<meta content='2' property='test'>
+<link href='https://plus.google.com/115111701179738795582' rel='publisher'>
+<link href='https://www.healthtap.com/imgs/feelgood/icon-ios-ht-logo-160x160.png' rel='apple-touch-icon-precomposed'>
+
+<meta content='2020-03-27' name='last-modified'>
+<meta content='2020-03-27' name='publication_date'>
+
+<meta content='summary' name='twitter:card'>
+<meta content='@HealthTap' name='twitter:site'>
+<meta content='My husband works everywhere including a short trip to east London ...?' name='twitter:title'>
+<meta content='Dr. Kirsten responded: Flu. Self isolation. Make sure he has not been in contact with anyone with Covid-19. &lt;br&gt;Get him tested as soon as possible.&lt;br&gt;Relax. Most of these symptoms are that of the normal flu.&lt;br&gt;Hope he feel better soon.&lt;br&gt;&lt;br&gt;' name='twitter:description'>
+<meta content='https://edc2.healthtap.com/ht-staging/user_answer/reference_image/47346/normal/486489287.jpeg?1415868035' name='twitter:image'>
+<meta content='HealthTap' name='twitter:app:name:iphone'>
+<meta content='466079030' name='twitter:app:id:iphone'>
+<meta content='https://www.healthtap.com/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o' name='twitter:app:url:iphone'>
+<meta content='HealthTap' name='twitter:app:name:ipad'>
+<meta content='466079030' name='twitter:app:id:ipad'>
+<meta content='https://www.healthtap.com/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o' name='twitter:app:url:ipad'>
+<meta content='HealthTap' name='twitter:app:name:googleplay'>
+<meta content='com.healthtap.userhtexpress' name='twitter:app:id:googleplay'>
+<meta content='https://www.healthtap.com/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o' name='twitter:app:url:googleplay'>
+
+
+
+<link href="/feelGood/compiled_css/layoutGuest.min.css?1585194835" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/feelGood/static_pages.min.css?1585194876" media="screen" rel="stylesheet" type="text/css" />
+<style>
+  @font-face {
+    font-family: "DearJoe";
+    src: url("https://www.healthtap.com/fonts/Dear-Joe.eot");
+    src: url("https://www.healthtap.com/fonts/Dear-Joe.eot?#iefix") format("embedded-opentype"), url("https://www.healthtap.com/fonts/Dear-Joe.woff") format("woff"), url("https://www.healthtap.com/fonts/Dear-Joe.ttf") format("truetype"); }
+  
+  .dear-joe {
+    font-family: DearJoe !important; }
+</style>
+<link href="/feelGood/compiled_css/questions.min.css?1585194838" media="screen" rel="stylesheet" type="text/css" />
+
+</head>
+<body class='guest-layout'>
+<div class='superContent'>
+<div class='header-static-guest new_mobile_layout' id='header'>
+<div class='headerLinks'>
+<div class='ht-logo-container'>
+<a class='ht-logo left-aligned' href='/' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_header_logo'></a>
+</div>
+<div class='header-text'>
+</div>
+<div class='right responsive'>
+<!-- .text Logout -->
+<a class='mainLink uq-desktop' href='/sign_up' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_header_sign_up'>
+<div class='text'>
+Sign Up
+</div>
+</a>
+<a class='mainLink uq-desktop' href='/login' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_header_log_in'>
+<div class='text'>Log In</div>
+</a>
+<div class='uq-mobile'>
+<a class='icon-box ask-docs' href='/payment?v=13&amp;promo_code=prime_30' track_data='{"type": "user_questions"}' track_event='guest_question_nav_askdocs'>
+<div class='icon ask-docs'></div>
+<div class='text'>
+Ask Docs
+</div>
+</a>
+<a class='icon-box share-wrap'>
+<div class='icon share-wrap'></div>
+<div class='text'>
+Share
+</div>
+</a>
+<a class='icon-box menu'>
+<div class='icon menu'></div>
+<div class='text'>
+Menu
+</div>
+</a>
+</div>
+
+<a class='mainLink about-link' href='/what_we_make/overview' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_header_about'>
+<div class='text'>About</div>
+</a>
+</div>
+</div>
+<link href="/stylesheets/feelGood/staticPages/browser_support.css?1585194800" media="screen" rel="stylesheet" type="text/css" />
+<div class='browser-support' serv_time='1585284047' style='display:none;'>
+<div class='centered clearfix'>
+<div class='close'></div>
+<div class='left-panel'>
+<div class='info'>
+<h3>
+Please upgrade your browser
+</h3>
+<p>
+Your current browser does not support all of the latest technology on HealthTap.
+For a better experience, please try one of these browsers:
+</p>
+</div>
+</div>
+<div class='right-panel'>
+<div class='icon-row'>
+<a class='browser chrome' href='https://www.google.com/intl/en/chrome/browser/' target='_blank'>
+<div class='logo'></div>
+<span class='text'>
+Chrome&nbsp;&rsaquo;
+</span>
+</a>
+<a class='browser firefox' href="https://www.firefox.com/" target='_blank'>
+<div class='logo'></div>
+<span class='text'>
+Firefox&nbsp;&rsaquo;
+</span>
+</a>
+</div>
+<div class='icon-row'>
+<a class='browser safari' href="https://support.apple.com/downloads/#safari" target='_blank'>
+<div class='logo'></div>
+<span class='text'>
+Safari&nbsp;&rsaquo;
+</span>
+</a>
+<a class='browser ie' href='http://windows.microsoft.com/en-ZA/internet-explorer/download-ie' target='_blank'>
+<div class='logo'></div>
+<span class='text'>
+Internet Explorer&nbsp;&rsaquo;
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class='dropdown-header'>
+<a class='item sign-up' href='/sign_up' track_data='{"type": "user_questions"}' track_event='guest_question_nav_menu_signup'>
+<div class='icon sign-up'></div>
+<div class='text'>Sign up free</div>
+</a>
+<a class='item login' href='/login' track_data='{"type": "user_questions"}' track_event='guest_question_nav_menu_login'>
+<div class='icon login'></div>
+<div class='text'>Log in</div>
+</a>
+<a class='item about' href='/who_we_are' track_data='{"type": "user_questions"}' track_event='guest_question_nav_menu_about'>
+<div class='icon about'></div>
+<div class='text'>About HealthTap</div>
+</a>
+</div>
+
+
+<div id='content-wrap'>
+<div class='' id='content'>
+<script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/0645.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+<!-- - if (@user_question.id%2 ==0) -->
+<!-- - upsell_copy = 'v3' -->
+<div class='clearfix content_inner'>
+<div class='hidden topic-name'>
+My husband works everywhere including a short trip to east London last week. He's showing symptoms of the covid 19 virus. What should I do as the flu medication is not helping.
+?
+</div>
+<div class='page-wrapper' data-in-experiment='' data-question="My husband works everywhere including a short trip to east London last week. He's showing symptoms of the covid 19 virus. What should I do as the flu medication is not helping.&#x000A;?" data-questionId='7141393' data-user-state='' my_question='no'>
+<div class='subheader new_mobile_layout'>
+<div class='clearfix new_mobile_layout sharing'>
+<div class='left'>
+<div class='answer-icon'></div>
+&nbsp;
+Answers
+</div>
+<div class='right'>
+<span class='follow-wrap guestFollowBtn icon-btn' data-follow='false'>
+<span class='follow2 btn-text'>Follow</span>
+<i class='follow-icon-dark'></i>
+</span>
+<span class='share-wrap icon-btn'>
+<span class='share btn-text'>
+Share
+</span>
+<i class='share-icon'></i>
+</span>
+</div>
+</div>
+<div class='question-text'>
+<div class='doctor-responded'>
+1 doctor weighed in:
+</div>
+<h1>My husband works everywhere including a short trip to east London last week. He's showing symptoms of the covid 19 virus. What should I do as the flu medication is not helping.
+?</h1>
+<div class='curbside-text second new_mobile_layout'>
+1 doctor weighed in
+</div>
+</div>
+</div>
+<div class='learn-module clearfix'>
+<div class='left left-panel span50'>
+<div class='questions-container'>
+<!-- - copy_version = Random.rand(26...46) -->
+<!-- - if (@user_question.id%4 ==0 or @user_question.id%4===1) -->
+<!-- - upsell_version = (a_index%2 == 0) ? 'v1' : 'v2' -->
+<!-- - else -->
+<!-- - upsell_version = (a_index%2 == 0) ? 'v2' : 'v1' -->
+<!-- / if guest, show concierge upsell if => dr is in concierge -->
+<div class='question-container delayed_image_container new_mobile_layout inline-container' data-answer-id='2863218' data-avatar='https://www.healthtap.com/images/avatars/gallery/neutral_expert_big_c_M.png' data-copy-version='48' data-last-name='Kirsten'>
+<div class='doctor-header'>
+<a class='avatar center' href='/experts/38396749-dr-jan-frederik-kirsten' style='background-image: url("https://www.healthtap.com/images/avatars/gallery/neutral_expert_big_c_M.png");'></a>
+<div class='doc-container-info'>
+<div class='doctor-info'>
+<div class='caduceus-big'></div>
+<a class='doctor-name emphasis' href='/experts/38396749-dr-jan-frederik-kirsten'>Dr. Jan frederik Kirsten</a>
+<div class='specialty'></div>
+<div class='rating'>
+<span class='star_wrap'>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star empty-star'></div>
+</span>
+</div>
+
+</div>
+</div>
+</div>
+<div class='answer clearfix'>
+<div class='my-question-content'>
+<div class='content-left left'>
+<h2>
+<span class='in-brief'>In brief:</span>
+<span class='short-answer'>
+Flu
+</span>
+</h2>
+<div class='long-answer'>
+<div class='answer_text'>
+Self isolation. Make sure he has not been in contact with anyone with Covid-19.
+</div>
+</div>
+<div class='long-answer'>
+<div class='answer_text'>
+<br>Get him tested as soon as possible.<br>Relax. Most of these symptoms are that of the normal flu.<br>Hope he feel better soon.<br><br>
+</div>
+<br>
+</div>
+</div>
+<div class='content-right left'>
+<noscript>
+<div class='answer-img' style='background-image:url(https://edc2.healthtap.com/ht-staging/user_answer/reference_image/47346/large/486489287.jpeg?1415868035);'></div>
+</noscript>
+<div class='answer-image delayed_image' style='display:none;' to_load='https://edc2.healthtap.com/ht-staging/user_answer/reference_image/47346/large/486489287.jpeg?1415868035'></div>
+</div>
+</div>
+<div class='no-my-question-content'>
+<h2>
+<span class='in-brief'>
+In brief:
+</span>
+<span class='short-answer'>
+Flu
+</span>
+</h2>
+<div class='long-answer'>
+<div class='answer_text'>
+Self isolation. Make sure he has not been in contact with anyone with Covid-19.
+</div>
+</div>
+<noscript>
+<div class='answer-img' style='background-image:url(https://edc2.healthtap.com/ht-staging/user_answer/reference_image/47346/large/486489287.jpeg?1415868035);'></div>
+</noscript>
+<div class='answer-image delayed_image' style='display:none;' to_load='https://edc2.healthtap.com/ht-staging/user_answer/reference_image/47346/large/486489287.jpeg?1415868035'></div>
+<div class='long-answer'>
+<div class='answer_text'>
+<br>Get him tested as soon as possible.<br>Relax. Most of these symptoms are that of the normal flu.<br>Hope he feel better soon.<br><br>
+<span class='follow-up-question-text hidden'>
+Would you like to video or text chat with me?
+</span>
+<span class='dollar-amt'></span>
+<div class='clearfix guest hidden in-app-ad primeAd v2' data-answer-id='2863218' doctor_data='{"type":"Expert","id":38396749,"url":"/experts/38396749","value":"Dr. Jan frederik Kirsten","last_name":"Kirsten","city_state":"Pretoria ","city":"Pretoria ","online":false,"student":false,"state":"","gender":"male","has_answers":true,"address_line1":"","zipcode":"0042","phone":"828392004","specialty":"","specialty_translations":[],"specialty_names":[],"doc_score":87,"intro":"","photo":"https://www.healthtap.com/images/avatars/gallery/neutral_expert_large.png","avatar_transparent":null,"avatar_transparent_circular":"https://www.healthtap.com/images/avatars/gallery/neutral_expert_big_c_M.png","bio_summary":"","years_in_practice":"","num_lives_saved":0,"specialist_name":null,"people_helped":31924,"number_of_agrees_received":82,"number_of_thanks_received":30,"abbreviate_name":"Dr. Kirsten","expert_pronoun":"doctor","in_network":false,"in_network_display_string":null,"in_network_display_string_expert":"Accepts patient&#x0027;s insurance","second_opinion_opted_out":false,"approved_licenses_states":[],"approved_licenses_states_display":[],"licenses":[],"display_location":"Pretoria","expert_name_prefix":"Dr.","expert_type":"doctor","cme_eligible":false,"avatar":{"url":"https://edc2.healthtap.com/ht-staging/pnx/avatars/defaults/doctor.png","sizes":["xsmall","small","medium","large","xlarge"],"densities":["1x","2x","3x"]},"secretaries":[],"practice_duration":"","in_concierge":true,"in_prime":false,"frozen_for_concierge":false,"concierge_eligible":true,"concierge_eligible_v2":true,"can_add_to_care_team":false,"had_concierge_connection_requests":true,"near_you":false,"consult_options":{"live":true,"appointment":false,"message":true},"has_office_hours":true,"has_virtual_office_hours":true,"has_in_office_hours":false,"vanity_url_full_path":"https://www.healthtap.com/dr-janfrederikkirsten","accept_insurance":false,"boss_integrated":false}'>
+<div class='ht_adSection v2'>
+<div class='docAvatar v2' style='background-image: url("https://www.healthtap.com/images/avatars/gallery/neutral_expert_big_c_M.png");'>
+<div class='caduceus-big v2'></div>
+</div>
+<div class='dr-content v2'>
+<div class='dr-name'>Dr. Jan frederik Kirsten</div>
+<div class='docscore v2'>
+<div class='rating'>
+<span class='star_wrap'>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star empty-star'></div>
+</span>
+</div>
+
+</div>
+</div>
+</div>
+<div class='askConciergeAd v2'>
+<input class='askInputArea' maxlength='150' placeholder='Type your question...'>
+<span class='askSendArea'>
+<a class='askSendBtn' href='/payment?v=v_i_o_b' track_data='{"type": "user_questions", "value": "prime"}' track_event='request_message_v2'>Send ›</a>
+</span>
+</div>
+</div>
+
+<div class='clearfix conciergeAd guest hidden in-app-ad v2' data-answer-id='2863218' doctor_data='{"type":"Expert","id":38396749,"url":"/experts/38396749","value":"Dr. Jan frederik Kirsten","last_name":"Kirsten","city_state":"Pretoria ","city":"Pretoria ","online":false,"student":false,"state":"","gender":"male","has_answers":true,"address_line1":"","zipcode":"0042","phone":"828392004","specialty":"","specialty_translations":[],"specialty_names":[],"doc_score":87,"intro":"","photo":"https://www.healthtap.com/images/avatars/gallery/neutral_expert_large.png","avatar_transparent":null,"avatar_transparent_circular":"https://www.healthtap.com/images/avatars/gallery/neutral_expert_big_c_M.png","bio_summary":"","years_in_practice":"","num_lives_saved":0,"specialist_name":null,"people_helped":31924,"number_of_agrees_received":82,"number_of_thanks_received":30,"abbreviate_name":"Dr. Kirsten","expert_pronoun":"doctor","in_network":false,"in_network_display_string":null,"in_network_display_string_expert":"Accepts patient&#x0027;s insurance","second_opinion_opted_out":false,"approved_licenses_states":[],"approved_licenses_states_display":[],"licenses":[],"display_location":"Pretoria","expert_name_prefix":"Dr.","expert_type":"doctor","cme_eligible":false,"avatar":{"url":"https://edc2.healthtap.com/ht-staging/pnx/avatars/defaults/doctor.png","sizes":["xsmall","small","medium","large","xlarge"],"densities":["1x","2x","3x"]},"secretaries":[],"practice_duration":"","in_concierge":true,"in_prime":false,"frozen_for_concierge":false,"concierge_eligible":true,"concierge_eligible_v2":true,"can_add_to_care_team":false,"had_concierge_connection_requests":true,"near_you":false,"consult_options":{"live":true,"appointment":false,"message":true},"has_office_hours":true,"has_virtual_office_hours":true,"has_in_office_hours":false,"vanity_url_full_path":"https://www.healthtap.com/dr-janfrederikkirsten","accept_insurance":false,"boss_integrated":false}'>
+<div class='ht_adSection v2'>
+<a class='docAvatar v2' href='/experts/38396749' style='background-image: url("https://www.healthtap.com/images/avatars/gallery/neutral_expert_big_c_M.png");'>
+<div class='caduceus-big v2'></div>
+</a>
+<div class='dr-content v2'>
+<div class='dr-name'>Dr. Jan frederik Kirsten</div>
+<div class='docscore v2'>
+<div class='rating'>
+<span class='star_wrap'>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star filled-star'></div>
+<div class='star empty-star'></div>
+</span>
+</div>
+
+</div>
+</div>
+</div>
+<div class='askConciergeAd v2'>
+<input class='askInputArea' maxlength='150' placeholder='Type your question...'>
+<span class='askSendArea'>
+<a class='askSendBtn' href='/experts/38396749/message?from_seo=1' track_data="{'type': 'user_questions', 'value': 48}" track_event='request_message'>Send ›</a>
+</span>
+</div>
+</div>
+
+</div>
+</div>
+<!-- .flag Flag -->
+<!-- .disclaimer Disclaimer -->
+</div>
+</div>
+<div class='question-actions' data-inlineConciergeUpsell data-user-state=''>
+<!-- TODO: conciergeUpsell -->
+<div class='thank-btn btn wide' data-answer-id='2863218' data-avatar='https://www.healthtap.com/images/avatars/gallery/neutral_expert_medium.png' data-doc-name='Dr. Jan frederik Kirsten' data-expert-id='38396749' data-isinline='true' data-type='answer' track_data='{"type": "guest_answer", "value": 2863218}' track_event='inline_thank_click_thank'>
+<div class='thank-icon'></div>
+Thank
+</div>
+</div>
+<div class='inline_hide_overflow'>
+<div class='feelGood_inline_item'></div>
+</div>
+<div class='answer-options clearfix v2'>
+<div class='disclaimer-action'>
+<div class='tooltip-link'>
+<div class='sprite-icon info-icon'></div>
+<div class='tooltip-info'>
+Disclaimer
+</div>
+</div>
+</div>
+</div>
+<!-- = render :partial => 'people/feelGood/in_app_ad', :locals =>{:klass => "primeAd"+(@current_person.guest? ? " guest": ""), :doctor=>doctor, :answer_id=>answer.id, :relationship=>relationship} -->
+<!-- = render :partial => 'people/feelGood/in_app_ad', :locals =>{:klass => "conciergeAd"+(@current_person.guest? ? " guest": ""), :doctor=>doctor, :answer_id=>answer.id, :relationship=>relationship} -->
+</div>
+</div>
+</div>
+<div class='right right-panel span50' thanked_answer='no'>
+<div class='concierge_ad_module layout-box top_doctors_online_module top_doctors_online_module_v10 white' event_type='guest_top_inline_concierge_ad_question' version='v1'>
+<div class='ht_ad_header'>
+Get help from a real doctor now
+</div>
+<div class='top_askDoc'>
+<div class='top_doc_intro reveal_doctor_info'>
+<div class='bigAvatar avatar' style="background: url('https://edc2.healthtap.com/ht-staging/people2/avatars/010/006/175/10006175/big_c/10006175x1523987197.png') no-repeat center; background-size:contain"></div>
+<div class='doc_name' id='center'>
+Dr. Aaron Milstone
+</div>
+<div class='doc_info' id='center'>
+<div class='board'>
+Board Certified, Internal Medicine - Pulmonology
+</div>
+<div class='text'></div>
+<div class='year'>
+26 years in practice
+</div>
+<div class='people'>
+1M people helped
+</div>
+<div class='rating'>
+<span class='star_wrap'>
+<img class='star filled-star' src='/imgs/feelgood/sprites/sprite/filled-star-big.png' style='background:transparent;width: 14px; height: 14px;'>
+<img class='star filled-star' src='/imgs/feelgood/sprites/sprite/filled-star-big.png' style='background:transparent;width: 14px; height: 14px;'>
+<img class='star filled-star' src='/imgs/feelgood/sprites/sprite/filled-star-big.png' style='background:transparent;width: 14px; height: 14px;'>
+<img class='star filled-star' src='/imgs/feelgood/sprites/sprite/filled-star-big.png' style='background:transparent;width: 14px; height: 14px;'>
+<img class='filled-star star5' src='/imgs/feelgood/sprites/sprite/filled-star-big.png' style='background:transparent;width: 14px; height: 14px;'>
+</span>
+</div>
+</div>
+</div>
+<div class='question_block'>
+<div class='talk-to-doc'>
+<textarea autocomplete='off' class='' data-placeholder="I'm online now. Type your question here." id='t2d_question' maxlength='150' placeholder="I'm online now. Type your question here."></textarea>
+</div>
+<div class='submit btn wide' event_name='guest_top_prime_ad_continue' event_type='entry_point' event_value='v1' href='/payment/?v=v_i_o_b' style='width: 100%; margin-top: 10px;'>
+<i class='doc-icon'></i>
+Continue
+</div>
+<div class='online-now'>
+<div class='circle'></div>
+100,000 doctors available
+</div>
+<div class='grey-icons'></div>
+</div>
+</div>
+</div>
+
+
+<div class='related-questions'>
+<ul>
+<h3 class='title'>Related questions</h3>
+<li class='clearfix question-item'>
+<a class='question' href='/user_questions/7138031-original-listerine-is-26-9-alcohol-does-gargling-it-prevent-viruses-like-flu-or-covid-or-at-least'>Original Listerine is 26.9% alcohol. Does gargling it prevent viruses like Flu or COVID or at least make it harde</a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>Original Listerine is 26.9% alcohol. Does gargling it prevent viruses like Flu or COVID or at least make it harder for viruses to start an infection?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+2 doctors responded
+</span>
+</div>
+</li>
+<li class='clearfix question-item'>
+<a class='question' href='/user_questions/7142788-should-someone-with-a-compromised-immune-system-due-to-rheumatoid-arthritis-get-the-flu-vaccine-esp'>Should someone with a compromised immune system due to rheumatoid arthritis get the flu vaccine, especially durin</a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>Should someone with a compromised immune system due to rheumatoid arthritis get the flu vaccine, especially during the COVID-19 crisis? Also, does the flu vaccine in South Africa use live or dead viruses?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+2 doctors responded
+</span>
+</div>
+</li>
+<li class='clearfix question-item'>
+<a class='question' href='/user_questions/7140720-hi-i-have-mild-flu-symptoms-since-last-week-and-i-completed-my-medication-now-and-my-partner-is-ha'>Hi, I have mild flu symptoms since last week and I completed my medication. Now and my partner is having chest pa</a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>Hi, I have mild flu symptoms since last week and I completed my medication. Now and my partner is having chest pain, sneezing etc. Is this signs enough to test for Covid-19?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+1 doctor responded
+</span>
+</div>
+</li>
+<li class='clearfix hidden question-item'>
+<a class='question' href='/user_questions/7141047-i-have-been-in-close-contact-with-someone-who-has-been-in-italy-recently-they-displayed-mild-flu-l'>I have been in close contact with someone who has been in  Italy recently. They displayed mild flu like symptoms </a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>I have been in close contact with someone who has been in  Italy recently. They displayed mild flu like symptoms but have since recovered. I have also felt very mild flu like symptoms. Do I need to be tested for COVID-19?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+1 doctor responded
+</span>
+</div>
+</li>
+<li class='clearfix hidden question-item'>
+<a class='question' href='/user_questions/7140809-person-in-dad-s-ofc-large-lawfirm-on-2-floors-neg-for-flu-etc-presumed-pos-for-covid-19-his-o'>Person in dad's ofc (large lawfirm on 2 floors) neg for flu, etc. &amp; presumed pos for COVID-19. His ofc closed tod</a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>Person in dad's ofc (large lawfirm on 2 floors) neg for flu, etc. &amp; presumed pos for COVID-19. His ofc closed today. How much of a risk is it to him and me (live in same house)? No one in his section is off, so not sure where in ofc sick person works</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+2 doctors responded
+</span>
+</div>
+</li>
+<li class='clearfix hidden question-item'>
+<a class='question' href='/user_questions/7141795-i-have-covid-19-symptoms-but-i-m-not-sure-if-i-have-it-or-it-s-the-flu'>I have covid 19 symptoms but I’m not sure if I have it or it’s the flu?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+1 doctor responded
+</span>
+</div>
+</li>
+<li class='clearfix hidden question-item'>
+<a class='question' href='/user_questions/7142153-hi-there-me-and-my-7year-old-have-flu-like-symptoms-and-have-been-in-contact-with-someone-that-arriv'>Hi there
+Me and my 7year old have flu like symptoms and have been in contact with someone that arrived from New Z</a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>Hi there
+Me and my 7year old have flu like symptoms and have been in contact with someone that arrived from New Zealand with an undiagnosed heavy flu. Should I get tested for COVID-19?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+1 doctor responded
+</span>
+</div>
+</li>
+<li class='clearfix hidden question-item'>
+<a class='question' href='/user_questions/7142197-i-ve-entered-my-symptoms-into-the-system-the-return-i-got-was-that-i-have-either-the-flu-covid-19'>I’ve entered my symptoms into the system &amp; the return I got was that I have either the flu, Covid 19, or a cold. </a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>I’ve entered my symptoms into the system &amp; the return I got was that I have either the flu, Covid 19, or a cold. Should I seek physical medical advice?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+1 doctor responded
+</span>
+</div>
+</li>
+<li class='clearfix hidden question-item'>
+<a class='question' href='/user_questions/7139864-feeling-a-little-of-shortness-of-breath-at-times-since-it-s-a-flu-season-and-currently-a-coronaviru'>Feeling a little of shortness of breath at times, since it's a flu season and currently a coronavirus as well, is</a>
+<a class='more'>more</a>
+<a class='question full-question' style='display: none;'>Feeling a little of shortness of breath at times, since it's a flu season and currently a coronavirus as well, is that a symptom alone for covid-19? Don't have a fever or any other symptoms and haven't travelled as well.</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+1 doctor responded
+</span>
+</div>
+</li>
+<li class='clearfix hidden question-item'>
+<a class='question' href='/user_questions/7139983-i-m-in-the-us-and-have-flu-like-symptoms-how-do-i-make-sure-it-s-not-covid-2019'>I'm in the US and have flu like symptoms. How do I make sure it's not Covid 2019?</a>
+<div class='answers'>
+<div class='caduceus'></div>
+<span class='text'>
+1 doctor responded
+</span>
+</div>
+</li>
+<li class='arrow-container'>
+<div class='down-arrow'></div>
+</li>
+</ul>
+</div>
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<link href="/stylesheets/feelGood/staticPages/footer_v2.css?1585194802" media="screen" rel="stylesheet" type="text/css" />
+<div class='' id='footer'>
+<div class='footerLinks'>
+<div class='social-icons'>
+<a class='icon-link pinterest-icon' href='https://www.pinterest.com/healthtap' rel='nofollow' target='_blank'></a>
+<a class='icon-link vimeo-icon' href='https://vimeo.com/healthtapofficial' rel='nofollow' target='_blank'></a>
+<a class='icon-link facebook-icon' href='https://www.facebook.com/HealthTap' rel='nofollow' target='_blank'></a>
+<a class='icon-link twitter-icon' href='https://www.twitter.com/HealthTap' rel='nofollow' target='_blank'></a>
+<a class='icon-link instagram-icon' href='https://www.instagram.com/HealthTap' rel='nofollow' target='_blank'></a>
+</div>
+<div class='columns'>
+<div class='column'>
+<a href='/who_we_are/vision_and_credo' rel='nofollow' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_who_we_are'>Who We Are</a>
+<a href='/what_we_make/story' rel='nofollow' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_what_we_make'>What We Make</a>
+<a href='/work_with_us/overview' rel='nofollow' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_work_with_us'>Work with Us</a>
+<a href='/terms' rel='nofollow' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_terms'>Terms</a>
+<a href='/terms/privacy_statement' rel='nofollow' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_privacy'>Privacy</a>
+<a href='https://healthtap.org' rel='nofollow'>HealthTap.org</a>
+</div>
+<div class='column'>
+<a href='/who_we_are/contact' rel='nofollow' target='_blank' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_contact'>Contact</a>
+<a class='text' href='http://blog.healthtap.com' rel='nofollow' target='_blank' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_our_blog'>Our Blog</a>
+<a href='/translate' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_translate'>Translate HealthTap</a>
+<a href='/answers_by_category' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_answers_by_speciality'>Answers by Category</a>
+<a href='/sitemap' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_answers_by_sitemap'>Sitemap</a>
+</div>
+<div class='column'>
+<div class='for-docs'>
+App for doctors:
+<span class='app-links'>
+<a href='https://itunes.apple.com/us/app/id466099564?' rel='nofollow' target='itunes_store' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_customer_ios'>
+iOS
+</a>
+<a href='https://play.google.com/store/apps/details?id=com.healthtap.mdhtexpress&amp;' rel='nofollow' target='itunes_store' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_customer_android'>
+Android
+</a>
+</span>
+</div>
+<div class='for-members'>
+App for customers:
+<span class='app-links'>
+<a href='https://itunes.apple.com/us/app/id466079030?' rel='nofollow' target='itunes_store' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_doctor_ios'>
+iOS
+</a>
+<a href='https://play.google.com/store/apps/details?id=com.healthtap.userhtexpress&amp;' rel='nofollow' target='itunes_store' track_data='{"type": "navigation", "value": "/user_questions/7141393-my-husband-works-everywhere-including-a-short-trip-to-east-london-last-week-he-s-showing-symptoms-o"}' track_event='navigation_footer_doctor_android'>
+Android
+</a>
+</span>
+</div>
+</div>
+</div>
+<div class='language-menu'>
+<div class='fg-native-select-wrapper'>
+<div class='fg-select-arrow'></div>
+<select class='fg-native-select display-language'></select>
+</div>
+</div>
+
+</div>
+<div class='disclaimer'>
+<div class='disclaimer-container'>
+<p>
+HealthTap does not provide medical advice, diagnosis, or treatment. <br />For these services, please use
+HealthTap Prime or HealthTap Concierge.
+See
+<a href='/terms/additional_info' target='_blank'>
+Additional Information
+</a>
+</p>
+<p class='smiles'>
+Made for you with ❤️
+</p>
+<p class='copyright'>
+&copy; 2020 HealthTap, All rights reserved
+</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128822047-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-128822047-6');
+</script>
+
+
+<script>
+  var _original_hash = location.hash;
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', "UA-17533963-1"]); // your ID/profile
+  _gaq.push (['_gat._anonymizeIp']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+  _gaq.push([
+    '_setCustomVar',
+    1,
+    'User Type',
+    "Patient",
+    2
+  ])
+</script>
+<noscript>
+<p>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-WPHR35' style='display:none;visibility:hidden' width='0'></iframe>
+</p>
+</noscript>
+
+<script>
+  window.Airbrake = [];
+  window.Airbrake.try = function(fn) { try { fn() } catch(er) { window.Airbrake.push(er); } };
+</script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/airbrake-js/0.5.9/client.min.js"
+  data-airbrake-project-id="108020"
+  data-airbrake-project-key="87ac244e1fb52474ccda57150d8f9acf"
+  data-airbrake-project-environment-name="production"></script>
+
+<div id='hidden' style='display: none;'>
+<div data-device='ios' data-member-type='guest' data-type='web' id='browser-data'></div>
+</div>
+<script>
+
+window.App = window.App || {};
+
+
+
+var hostServer = 'https://www.healthtap.com';
+if( window.location != 'undefined' && window.location != null && window.location.origin != 'undefined'  && window.location.origin != null){
+  hostServer = window.location.origin;
+}
+
+var search_filters = {
+  'Availability': true,
+  'Near city/town': true,
+  'Specialty': true,
+  'Language Spoken': true,
+  'Gender': true,
+  'DocScore': true,
+  'Years in Practice': true,
+  'Degrees': true
+}
+
+App.defaults = {
+    server : hostServer,
+    shareServer: 'https://www.healthtap.com', //added a separate url for this so it can be updated in one place - at the moment the facebook api needs to point to healthtap.com
+    assetServer : '',
+    base_path_for_backbone_routes: '/expert/pages',
+    urls: {
+      imgs:  '/imgs/',
+      login: '/people/sign_in.json',
+      feeds: '/polymorphic_activities.json?v2=1',
+      expertFeeds: '/experts/merged_queue.json',
+      expertAnswersEndorse: '/experts/answers_to_endorse.json',
+      expertWorkQueue: '/experts/work_queue.json?view=user_questions',
+      demoQueue: '/expert_applications/demo_queue.json',
+      searchResults: '/people.json',
+      memberTopDoctors:'/people/top_doctors.json',
+      findDoctorByName:'/experts.json', //TODO: Replace URL with final one
+      forgotPW:'/people/password.json',
+      resetPW: '/people/password.json',
+      notifications: '/mobile/status_bar.json',
+      htx: '/person_notifications.json',
+      member_top_doctors: '/people/top_doctors.json',
+      autocomplete: '/tap_suggestions/autocomplete.json?q=',
+      inviteEmail: '/experts/invite_email.json',
+      feedSettings: '/people/feed_settings.json',
+      doctorsAndGroups: '/people/doctors_and_groups.json',
+      topicDoctors: '/topics/doctors_and_groups/:topic_string.json',
+      doctorsForYou: '/people/doctors_for_you.json',
+      peopleLikeYou: '/people/suggested_topics.json',
+      suggestedTopics: '/topics/suggested_topics/:topic_string.json',
+      profile: '/member_profiles.json',
+      memberAskDoc: '/user_questions.json',
+      checkSimilar: '/user_questions/similar.json',
+      checkSpelling: '/ajax/spellcheck.json',
+      expertInfo: '/experts/:id.json',
+      expertDirectory: '/experts.json',
+      expertTabAbout: '/expert_profiles.json?expert_id=:id',
+      groupInfo: '/groups/:id.json',
+      groupTabAbout: '/groups/:id.json',
+      networkExperts: '/people/network_experts.json?v2=1',
+      networkFollowing: '/people/network_following.json',
+      networkFollowingExperts: '/people/network_following_experts.json',
+      networkFollowers: '/people/network_followers.json',
+      networkSuggestions: '/people/network_suggestions.json',
+      addToTeam: '/expert/:expert_id/add_to_team.json',
+      groupTabAccolades: '/groups/:id/testimonials.json',
+      expertAccolades: '/experts/:id/trophy_room.json?v=5',
+      suggestedConnection: '/experts/suggested_connections.json',
+      findADoctor: '/experts/nearby.json',
+      expertKnownFor: '/experts/:id/topics.json',
+      groupKnownFor: '/groups/topics.json?group_id=:id',
+      createAppointment: '/appointments.json',
+      SMSverificationCode : '/appointments/:id/verify.json',
+      retryVerificationCode : '/appointments/:id/resend.json',
+      inviteEmail: '/experts/invite_email.json',
+      similarQuestions: '/messages/user_questions.json',
+      vipNetworkExpert: '/people/:id/network_experts.json?page=:page;per_page=10;v2=1',
+      vipNetworkFollowing: '/people/:id/network_following.json',
+      groupDocs: '/groups/:id/experts.json',
+      mobile_carriers: '/pages/mobile_carriers.json',
+      personMedications: '/person_medications.json',
+      personAllergies: '/person_allergies.json',
+      personAllergies: '/person_allergies.json',
+      personSymptoms: '/person_conditions.json',
+      personProcedures: '/person_procedures.json',
+      personImmunizations: '/person_immunizations.json',
+      patientDirectory: '/api/v2/expert/fetch_patients.json',
+      HealthHistoryEntries: '/health_journal.json',
+      expertLatestActivity: '/polymorphic_activities/sitewide.json',
+      imagePreviews: '/image_previews',
+      imagePreviewSecure: '/secure_image_previews',
+      googleSearch: '/photos/google_search',
+      photoSearch: '/photos/ht_search',
+      answerUserQuestion : '/user_questions/:id/user_answers',
+      statusUpdate: '/status_updates.json',
+      expertMessages : '/conversations.json',
+      expertCreateMessage : '/messages.json',
+      expertRejectEpisode: '/episodes/reject.json',
+      expertReferEpisode: '/episodes/refer.json',
+      expertScore: '/experts/game_score_graph.json?',
+      leaderboard: '/experts/leaderboard.json?v=4',
+      contactsAuto : '/people/contacts_autocomplete.json',
+      member2expertPM: '/messages/create_expert_pm.json',
+      pricePlans : '/pages/price_plans.json',
+      submitPayment : '/payments/submit.json',
+      docPatientAuto : '/experts/by_name.json',
+      editQuestion : '/user_questions/:id/correct.json',
+      recommendDoctor : '/experts/:id/recommend.json',
+      recommendGroup : '/groups/:id/recommend.json',
+      HTcreditCost : '/pages/price_plan',
+      expertJoinGroup: '/groups/:id/add_expert.json',
+      expertRemoveGroup: '/groups/:id/remove_expert.json',
+      personSettings: '/person_settings.json',
+      gameScore : '/people/game_score_graph.json',
+      shareFile : '/uploads/share_file.json',
+      fileUploadStorage : '/uploads.json',
+      getImageInfo : '/uploads/:id.json',
+      deleteQuestion: '/user_questions/:id',
+      potentialPatients : '/experts/potential_patients.json',
+      expertFollowers : '/people/:id/network_followers.json',
+      newExpertClaims : 'experts/new_expert_claims.json',
+      checkTopic: 'topics/check_topic.json?topic=',
+      isNice : '/people/:id/is_nice.json',
+      thankMessage : '/thanks.json',
+      specialties: '/expert_specialties.json',
+        feedbackMessage : '/feedbacks.json',
+        topicFeed: '/topics/:topic.json?extended_categories=1',
+        credit_card_on_file : '/people/credit_card_on_file.json',
+        referColleague : '/user_questions/:id/refer_to_colleague.json',
+        acceptForward : '/messages/:id/accept_forward.json',
+        declineForward : '/messages/:id/decline_forward.json',
+      browse: '/attributes/browse.json?context_attribute_name=:attrName',
+        autocomplete2: '/attributes/autocomplete.json?v2=1'
+    },
+    device: 'web',
+    total_expert_display_count: '100000',
+    androidTab: false,
+    default_page: '',
+    page_params: {},
+    user_locale: '{"lang_locale":"en-US","geo_locale":"US","languages_speaks":null,"languages_reads_and_writes":null,"launched_locale":"en-US"}',
+    lang_locale: 'en-US',
+    inlineTemplates: false,  // LGM: used to fetch templates from inline scripts, turned off as manual override is used in local HTML file, this key here is for compatibility
+    login_failed: false,
+    expert_application_pending: false,
+    minified: false,
+    google_analytics_key: 'UA-17533963-1',
+    rails_env: "staging",
+    maxAnswerLen: 200,
+    user_json : {"refer_code":null,"personalizeOff":false,"person":{"expert":false,"student":false,"member":false,"guest":true,"symptom_triage_enabled":true},"lives_saved":{"num_lives_saved":25935,"num_answers_served":6500000000,"num_answers_served_increment":0}},
+    capabilities: {"google_apis":true},
+    api_key: 'bhmBagy36ltABc2OmeNF',
+    primary_enterprise_group: '',
+    cobranded_logo: '/imgs/feelgood/ht-logo.png',
+    cobranded_product: 'HealthTap',
+    enterprise_organization: 'HealthTap',
+    enterprise_id_card: {},
+    enterprise_profile_security: {},
+    profile_auth_expires: 0,
+    enterprise_account_requirements: {},
+    enterprise_support_site: '',
+    enterprise_support_email: '',
+    enterprise_support_phone: '',
+    outsider_expert_consults_enable: false,
+    vip_status: false,
+    subaccount_requirements: null,
+    use_old_plugin: false,
+    google_geocode_key: 'AIzaSyDKmCMohiz3EAaa9PJH2Fs3lECdHaLlqO0',
+    min_age_restriction_enabled: true,
+    min_primary_account_age: 16,
+    max_account_age: 130,
+    can_add_subaccounts: true,
+    showSuggestedDoctors: true,
+    hideConciergeLogo: false,
+    inbox_consult_disabled: false,
+    clinicians_search_filters: search_filters,
+    hide_doctor_rating: false,
+    hide_member_rating: false,
+    notification_logo: '',
+    session_timeout_duration_min: 0,
+    show_information_modules: [],
+    show_contact_details: false,
+    has_active_eticket: false,
+    session_timeout_enabled: false,
+    cookies_banner_required: true,
+    native_app: false,
+    tablet_app: false,
+    ios_app_store_link: 'https://itunes.apple.com/us/app/healthtap-express/id466079030?mt=8&amp;ign-mpt=uo%3D4',
+    android_app_store_link: 'https://play.google.com/store/apps/details?id=com.healthtap.userhtexpress',
+    next_endpoint: "https://next.healthtap.com",
+    payment_processing_enabled: true,
+    permissions: {}
+};
+window.feelGood = window.feelGood || {};
+
+if (document.getElementsByTagName('body').length > 0) {
+  document.getElementsByTagName('body')[0].className += " en-US";
+}
+
+
+</script>
+<script type="application/ld+json">
+  [{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "HealthTap",
+    "url": "https://www.healthtap.com"
+  }]
+</script>
+
+<script src="/feelGood/compiled_js/ilib-standard.min.js?1585194704" type="text/javascript"></script>
+<script src="/localized_js/en-US.js?1585284047" type="text/javascript"></script>
+<script src="/feelGood/js/initialize_rb.js?1571124199" type="text/javascript"></script>
+<script src="/feelGood/js/initialize_formatters.js?1560276135" type="text/javascript"></script>
+<script>
+	var path = "/feelGood/templates/compiled_templates.en-US.js?1585284047";
+	window.addEventListener('load', function(e) {
+		window.compiledTemplatesXHR = $.getScript(path)
+	});
+</script>
+
+
+<script src="/feelGood/compiled_js/layout_guest.min.js?1585194697" type="text/javascript"></script>
+<script src="/feelGood/compiled_js/questions.min.js?1585194711" type="text/javascript"></script>
+<script src="/feelGood/js/staticPages/browser_support.js?1560276135" type="text/javascript"></script>
+
+</body>
+</html>
